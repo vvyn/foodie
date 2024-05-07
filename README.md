@@ -11,6 +11,19 @@ Top 5 recommendations based on input
 
 ![image](https://github.com/vvyn/foodie/assets/62407356/46dd1289-1e37-419f-82f8-7dabdf8e838d)
 
+# Project Overview
+- Data
+  - The first step was to find a good data source. I tried to query WikiData for food related data, but later I ended up using Food.com's Recipe dataset from Kaggle.
+  - I used the recipe name, ingrediant, and description columns of the dataset.
+- Preprocessing
+  - Included checking for null and unique values.
+  - Removing special characters such as commas, brackets, and spaces.
+  - Correct tokenzation of both the recipe data and the user's input. 
+- Word2Vec
+- Cosine Similarity
+- Testing
+- Keyword Extraction
+
 # Code
 - model: src/foodie.ipynb
 - model+chatbot: chatbot.py
