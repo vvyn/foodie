@@ -3,7 +3,13 @@ How much time do you spend deciding on what would you like to eat? Save time by 
 
 # Input
 Please format your entry by seperating each ingrediant and keyword by comma
--   ex. "butter, cheese, sugar, cherry, blueberry"
+
+![image](https://github.com/vvyn/foodie/assets/62407356/d68bc49e-5235-44d6-b5ef-825d00064761)
+
+# Output
+Top 5 recommendations based on input
+
+![image](https://github.com/vvyn/foodie/assets/62407356/46dd1289-1e37-419f-82f8-7dabdf8e838d)
 
 # Code
 - model: src/foodie.ipynb
