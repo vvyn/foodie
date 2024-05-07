@@ -54,7 +54,10 @@ async def on_message(message):
                 #recommendation = rec_food(msg.content)
                 #data_test = get_data(msg.content)
                 #label_test = find_related_foods(get_label(msg.content))
-                label_test2 = get_label2(msg.content)
+                label_test2 = rec_food(msg.content)
+                #label_test2 = get_label2(msg.content)
+                #label_test2 = get_data(msg.content)
+                #label_test2 = find_related_foods(get_label(msg.content))              
                 await message.channel.send(f'{label_test2}\n\nwhat other type of food would you like to be recommended?')
             except asyncio.TimeoutError:
                 await message.channel.send("time out, please try again!")
