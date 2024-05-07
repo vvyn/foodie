@@ -1,3 +1,5 @@
+# STILL IN PROGRESS!!
+
 # foodie
 - get food recommendations based on ingredients and keywords
 
