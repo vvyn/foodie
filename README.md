@@ -20,9 +20,14 @@ Top 5 recommendations based on input
   - Removing special characters such as commas, brackets, and spaces.
   - Correct tokenzation of both the recipe data and the user's input. 
 - Word2Vec
+  - I trained a Word2Vec model on the recipe dataset, resulting the model's wordlist including all the ingrediants in the dataset. 
+  - Afterwards, I took every recipe token array, checked whether each token was in the Word2Vec wordlist, then took the averages of the vectors of the tokens that were in the wordlist. This created an array of all of the recipe vectors that could be compared against to fidn the most similar recipes.
 - Cosine Similarity
+  - To find the most similar recipe based on the user input, I cleaned, tokenized, and vectoried the user input in a similar way to the dataset. Then, I compared the similarities of the user input vector with that of all of the recipe vectors using cosine similarity. I sorted by the percentage of similarity to get the top 5 most similar recipes that were outputted to the user. 
 - Testing
+  - To see how accurate the model is, I looked at how similar the cosine similarity percentages were along with whether the results matched something I would want to be outputted as a potential user. 
 - Keyword Extraction
+  - I then extracted keywords, by self defining a list based on 'salty' and 'sweet', along with other terms, comparing the list with the description column using name entity recognition, and then creating a new column named keywords that label each recipe with the extracted keywords found in the description.
 
 # Code
 - model: src/foodie.ipynb
