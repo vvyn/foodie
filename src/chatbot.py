@@ -7,7 +7,8 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
-
+import pickle5 as pickle
+import Word2Vec as Word2Vec
 load_dotenv('.env.local')
 
 # lets bot subscribe to bucket of events
@@ -26,9 +27,9 @@ logger.addHandler(handler)
 
 # load the model and data
 model = Word2Vec.load("./foodie.model")
-recipe_vectors = pd.read_pickle("/path/to/your/recipe_vectors.pkl")
-X_train_clean = pd.read_pickle("/path/to/your/X_train_clean.pkl")
-y_train = pd.read_pickle("/path/to/your/y_train.pkl")
+recipe_vectors = pd.read_pickle("./recipe_vectors.pkl")
+X_train_clean = pd.read_pickle("./X_train_clean.pkl")
+y_train = pd.read_pickle("./y_train.pkl")
 
 def clean_tokens(input):
     try:
